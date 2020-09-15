@@ -1,0 +1,12 @@
+[class*="border"]
+{
+	border-width: 10px !important;
+}
+
+.caja
+{
+	/*width: 100vw;*/
+	min-height: 100vh;
+	padding: 10px;
+	background-color: var(--blue);
+}
