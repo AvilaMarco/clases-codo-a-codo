@@ -94,7 +94,7 @@ footer
 }
 .caja
 {
-	background: #31C417FF;
+	background: #ffffff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -102,7 +102,7 @@ footer
 }
 .caja:nth-child(even)
 {
-	background-color: red;
+	background-color: rgb(255, 208, 0);
 }
 
 :target
