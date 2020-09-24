@@ -67,9 +67,11 @@ let number4 = 4,
 let suma = number1 + number2;
 let resta = number3 - number1;
 let multiplicacion = number4 * number6;
-let division = number5 * number2;
+let divisionNumber = number5 / number2;
 let modulo = number6 % number2;
-let divisionEntera = parseInt(division);
+// @ts-ignore
+let divisionEntera = Number.parseInt(divisionNumber);
+
 console.log(
   "numero flotante y numero entero:\n numero entero: 50\n numero floatante: 33.32"
 );
