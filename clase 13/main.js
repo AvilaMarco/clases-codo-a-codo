@@ -129,20 +129,20 @@ if (horaActual >= 6 && horaActual <= 12) {
 // console.log("win");
 
 // version 2
-// const numeroRandom = Math.ceil(Math.random() * 100);
-// let textoPregunta = "ingrese un numero";
-// let userNumber1 = parseInt(prompt(textoPregunta));
-// while (numeroRandom != userNumber1) {
-//   // condigo
-//   if (userNumber1 > numeroRandom) {
-//     textoPregunta = "ingrese un numero mas pequeño";
-//   } else {
-//     textoPregunta = "ingrese un numero mas grande";
-//   }
-//   // actualizar variables de bucle
-//   userNumber1 = parseInt(prompt(textoPregunta));
-// }
-// document.write("<h2>You Win</h2>");
+const numeroRandom = Math.ceil(Math.random() * 100);
+let textoPregunta = "ingrese un numero";
+let userNumber1 = parseInt(prompt(textoPregunta));
+while (numeroRandom != userNumber1) {
+  // condigo
+  if (userNumber1 > numeroRandom) {
+    textoPregunta = "ingrese un numero mas pequeño";
+  } else {
+    textoPregunta = "ingrese un numero mas grande";
+  }
+  // actualizar variables de bucle
+  userNumber1 = parseInt(prompt(textoPregunta));
+}
+document.write("<h2>You Win</h2>");
 
 let userNumber = parseInt(prompt("ingrese un numero"));
 let multiplicarHasta = parseInt(prompt("ingrese un numero"));
