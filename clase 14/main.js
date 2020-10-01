@@ -58,6 +58,7 @@ const my_function = function () {
   console.log("codigo...");
 };
 my_function();
+
 // // valores por defecto
 // function almorzar3(
 //   entrada = "panesitos",
@@ -80,3 +81,17 @@ my_function();
 // }
 // console.log("var1", variable1); //7
 // console.log("let1", let1); //10
+
+/* RETURN */
+// function cuenta(entrada, bebida, platoPrincipal) {
+//   console.log("buscar precios......");
+//   const total = entrada.length + bebida.length + platoPrincipal.length;
+//   return total;
+// }
+
+// function tablaMultiplicarDE(number, hasta) {
+//   for (let i = 0; i < hasta; i++) {
+//     if (i % 2 == 1) continue;
+//     console.log(`${number} x ${i} = ${number * i}`);
+//   }
+// }

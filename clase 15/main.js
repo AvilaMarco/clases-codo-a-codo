@@ -1,82 +1,78 @@
-// let element1 = document.querySelector("#id");
-// let element2 = document.querySelector(".class");
-// let element3 = document.querySelector("element");
-// let element4 = document.querySelector("[name]");
+/* REPASO */
 
-// // template string
-// // parametros
-// function almorzar2(entrada, bebida, platoPrincipal) {
-//   console.log(`menu:\n${entrada}, ${bebida}, ${platoPrincipal}`);
+function almorzar(entrada = "pan", bebida = "agua", platoPrincipal = "") {
+  console.log(`menu:\n${entrada}, ${bebida}, ${platoPrincipal}`);
+}
+
+function cuenta(entrada, bebida, platoPrincipal) {
+  console.log("buscar precios......");
+  const total = entrada.length + bebida.length + platoPrincipal.length;
+  return total;
+}
+
+function tablaMultiplicarDE(number, hasta = 10) {
+  for (let i = 1; i <= hasta; i++) {
+     if (i % 2 == 1) {
+      continue;
+    }
+    console.log(`${number} x ${i} = ${number * i}`);
+  }
+}
+
+/* ARRAYS */
+
+// let numero0 = 1;
+// let numero1 = 2;
+// let numero2 = 2;
+// let numero3 = 2;
+// let numero4 = 2;
+// let numero5 = 2;
+// let numero6 = 2;
+
+let numeros = ["cero","uno","dos","tres"];
+
+/* RECORRER ARRAYS */
+// for (let i = 0; i < numeros.length; i++) {
+//   const element = numeros[i];
+//   console.log(i);
+//   console.log(element);
 // }
-// // valores por defecto
-// function almorzar3(
-//   entrada = "panesitos",
-//   bebida = "agua",
-//   platoPrincipal = ""
-// ) {
-//   console.log(`menu:\n${entrada}, ${bebida}, ${platoPrincipal}`);
+
+// for of
+// for (const iterator of numeros) {
+//   console.log(iterator.includes("e"));
 // }
 
-// // return
-// function cuenta(entrada, bebida, platoPrincipal) {
-//   console.log("buscar precios......");
-//   const total = entrada.length + bebida.length + platoPrincipal.length;
-//   return total;
-// }
+let comidas = ["empanada","pizza","pancho","milanesa","ñoquis","ravioles"]
 
-// function tablaMultiplicarDE(number, hasta) {
-//   for (let i = 0; i < hasta; i++) {
-//     if (i % 2 == 1) continue;
-//     console.log(`${number} x ${i} = ${number * i}`);
-//   }
-// }
+// usando forEach parte 1
+comidas.forEach(callbackfn)
 
-// /**
-//  * @returns Number
-//  */
-// const myFunction = function () {
-//   return 10;
-// };
+function callbackfn(element, indice, my_array){
+  console.log(element);
+  console.log(indice);
+  console.log(my_array);
+}
 
-// // Dom
-// document.write("mensaej");
-// console.log(document);
+// Usando forEach parte 2
+comidas.forEach(function(element, indice, my_array){
+  console.log(element);
+  console.log(indice);
+  console.log(my_array);
+})
 
-// // des uso
-// let myElement = document.getElementById("id");
-// let myElement2 = document.getElementsByClassName("clase");
+// usando forEach parte 3
+// funciones flecha
+comidas.forEach((element, indice, my_array)=>{
+  console.log(element);
+  console.log(indice);
+  console.log(my_array);
+})
 
-// let element = document.querySelector("p");
-// //agrega o quita una clase
-// element.classList.toggle("clase1");
-// //agrega o quita una clase segun la condicion
-// element.classList.toggle("clase1", condicion);
-// //pregunta si tiene la clase
-// element.classList.contains("clase1");
+// usando forEach parte 4
+comidas.forEach((element) => {
+  console.log(element);
+})
 
-// element.classList.add("clase1", "clase2");
-// element.classList.remove("clase3");
-// //reemplaza una clase por otra
-// element.classList.replace("oldClass", "newClass");
-
-// element.style.display = "flex";
-// element.style.margin = "20px";
-// element.style.backgroundColor = "red";
-// element.style.gridTemplate = "1fr / 1fr";
-
-// element.innerText = `string`;
-// element.innerHTML = `<span>string</span>`;
-
-// // ingresar texto en un elemento
-// console.log(element.innerText);
-// // element.innerHTML ingresar html
-// // .style
-// // function devolveComida(comida)
-// // {
-
-// // }
-// // function
-// // parametros
-
-// // DOM
-// // seleccionar elementos
+// usando forEach parte 5
+comidas.forEach( e => console.log(e));
