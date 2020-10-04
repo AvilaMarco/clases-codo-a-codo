@@ -1,5 +1,4 @@
 
-
 // // desuso
 // let myElement = document.getElementById("id");
 // let myElement2 = document.getElementsByClassName("clase");

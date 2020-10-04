@@ -1,16 +1,20 @@
 // REPASO
 // let expresion = true;
 // let expresion2 = true;
-// let indice = 1;
-// while (indice <= 10) {
-//   if (indice % 2 == 0) {
-//     console.log(indice);
-//     indice++;
-//     continue;
-//   }
-//   console.log("codigo....");
-//   indice++;
-// }
+let indice = 1;
+while (indice <= 10) {
+  
+  if (indice % 2 == 0) {
+    console.log(indice);
+    indice++;
+    continue;
+  }
+  if(indice == 5) break;
+  console.log("codigo....");
+  indice++;
+}
+
+
 // for (let indice = 1; indice <= 10; indice++) {
 //   if (indice % 2 == 0) {
 //     console.log(indice);
