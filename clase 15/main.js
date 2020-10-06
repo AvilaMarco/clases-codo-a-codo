@@ -12,7 +12,7 @@ function cuenta(entrada, bebida, platoPrincipal) {
 
 function tablaMultiplicarDE(number, hasta = 10) {
   for (let i = 1; i <= hasta; i++) {
-     if (i % 2 == 1) {
+    if (i % 2 == 1) {
       continue;
     }
     console.log(`${number} x ${i} = ${number * i}`);
@@ -29,7 +29,7 @@ function tablaMultiplicarDE(number, hasta = 10) {
 // let numero5 = 2;
 // let numero6 = 2;
 
-let numeros = ["cero","uno","dos","tres"];
+let numeros = ["cero", "uno", "dos", "tres"];
 
 /* RECORRER ARRAYS */
 // for (let i = 0; i < numeros.length; i++) {
@@ -43,36 +43,36 @@ let numeros = ["cero","uno","dos","tres"];
 //   console.log(iterator.includes("e"));
 // }
 
-let comidas = ["empanada","pizza","pancho","milanesa","ñoquis","ravioles"]
+let comidas = ["empanada", "pizza", "pancho", "milanesa", "ñoquis", "ravioles"];
 
 // usando forEach parte 1
-comidas.forEach(callbackfn)
+comidas.forEach(callbackfn);
 
-function callbackfn(element, indice, my_array){
+function callbackfn(element, indice, my_array) {
   console.log(element);
   console.log(indice);
   console.log(my_array);
 }
 
 // Usando forEach parte 2
-comidas.forEach(function(element, indice, my_array){
+comidas.forEach(function (element, indice, my_array) {
   console.log(element);
   console.log(indice);
   console.log(my_array);
-})
+});
 
 // usando forEach parte 3
 // funciones flecha
-comidas.forEach((element, indice, my_array)=>{
+comidas.forEach((element, indice, my_array) => {
   console.log(element);
   console.log(indice);
   console.log(my_array);
-})
+});
 
 // usando forEach parte 4
 comidas.forEach((element) => {
   console.log(element);
-})
+});
 
 // usando forEach parte 5
-comidas.forEach( e => console.log(e));
+comidas.forEach((e) => console.log(e));
