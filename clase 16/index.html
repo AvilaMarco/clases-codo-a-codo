@@ -372,13 +372,20 @@
               class="container d-flex justify-content-around h-75 flex-column"
             >
               <input
-                type="text"
+                type="number"
                 class="form-control p-3"
                 placeholder="Ingresa un numero"
+                id="user_game"
               />
-              <div id="text-game" class="alert alert-danger">Try Again!</div>
-              <button class="btn btn-primary btn-block">GO!</button>
-              <div class="alert alert-success">YOU WIN!</div>
+              <div id="text-game-lose" class="alert alert-danger d-none">
+                Try Again!
+              </div>
+              <button id="btn_game" class="btn btn-primary btn-block">
+                GO!
+              </button>
+              <div id="text-game-win" class="alert alert-success d-none">
+                YOU WIN!
+              </div>
             </div>
           </div>
           <!-- section 3 -->

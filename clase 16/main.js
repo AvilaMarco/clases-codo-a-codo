@@ -1,12 +1,49 @@
 let arrNumbers = [2, 4, 3, 68, 8, 5, 7, 13, 1, 8, 10];
 let arrStrings = ["Zas", "arte", "klgjk", "lorem"];
 
+let inputGame = document.querySelector("#user_game");
+let btnGame = document.querySelector("#btn_game");
+let textLose = document.querySelector("#text-game-lose");
+let textWin = document.querySelector("#text-game-win");
+
+let numberRandom = Math.ceil(Math.random() * 100);
+
+btnGame.addEventListener("click", game_number_random);
+
+function game_number_random() {
+  let numberUser = parseInt(inputGame.value);
+  let mensajeUsuario = "";
+  if (numberUser == numberRandom) {
+    textWin.innerText = "You Win!";
+    textWin.classList.remove("d-none");
+    textLose.classList.add("d-none");
+    // game_end
+    btnGame.removeEventListener("click", game_number_random);
+    return;
+  } else if (numberUser > numberRandom) {
+    mensajeUsuario = "Ingrese un valor mas pequeño";
+    // textLose.innerText = mensajeUsuario
+    // textLose.classList.remove("d-none")
+    // console.log("ingrese un valor mas pequeño");
+  } else if (numberUser < numberRandom) {
+    mensajeUsuario = "Ingrese un valor mas grande";
+    // textLose.innerText = mensajeUsuario
+    // textLose.classList.remove("d-none")
+    // console.log("ingrese un valor mas grande");
+  } else {
+    console.error("error de datos");
+  }
+
+  textLose.innerText = mensajeUsuario;
+  textLose.classList.remove("d-none");
+}
+
 // arrNumbers.forEach(function (element, indice, my_array) {
 //   console.log(element);
 //   //   console.log(indice);
 //   //   console.log(my_array);
 // });
-let cumple;
+// let cumple;
 // cumple = arrNumbers.some(function (element) {
 //   return element == 9;
 // });
@@ -17,7 +54,7 @@ let cumple;
 //   return element % 2 == 0;
 // });
 
-console.log(cumple);
+// console.log(cumple);
 
 // FUNCIONES SORT
 const AscendantNumbers = (n1, n2) => n1 - n2;
@@ -27,7 +64,7 @@ const descendantStrings = (str1, str2) => str2.localeCompare(str1);
 
 /* ELEMENTS */
 // let inputName = document.getElementById("firstName");
-let unDiv = document.querySelector("div");
+// let unDiv = document.querySelector("div");
 // let inputName = document.querySelector("#firstName");
 // console.log(inputName);
 // no es Array
@@ -61,7 +98,7 @@ let unDiv = document.querySelector("div");
 //   //   console.log(evento.target);
 // }
 
-const input = document.querySelector("#email");
+const input = document.querySelector("#firstName");
 
 input.addEventListener("invalid", (evento) => {
   let input = evento.target;
@@ -72,6 +109,7 @@ input.addEventListener("invalid", (evento) => {
 
 input.addEventListener("input", (ev) => {
   let input = ev.target;
+
   input.classList.remove("is-valid", "is-invalid");
   //   input.classList.add(input.checkValidity() ? "is-valid" : "is-invalid");
   if (input.checkValidity()) {
