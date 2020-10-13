@@ -1,3 +1,37 @@
+.grid-clima {
+  display: grid;
+  grid-template-areas:
+    "input input"
+    "clima info"
+    "location info";
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 1fr 250px;
+  height: 60vh;
+  width: 70vw;
+}
+.input,
+.clima,
+.info,
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.clima {
+  grid-area: clima;
+}
+.info {
+  grid-area: info;
+}
+.location {
+  grid-area: location;
+}
+.input {
+  grid-area: input;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .grid-home {
   display: grid;
   grid-template-areas:

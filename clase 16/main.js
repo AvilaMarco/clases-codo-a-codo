@@ -1,3 +1,49 @@
+function apiClima(lugar) {
+  const access_key = "access_key=2790eeb210ec85e55131a5ab40c14e48";
+  fetch(`http://api.weatherstack.com/current?${access_key}&query=${lugar}`)
+    .then((response) => response.json())
+    .then((data) =>
+      data.current ? mostrarInfo(data) : mostrarError(data.error)
+    );
+}
+function mostrarInfo(data) {
+  const headerClima = document.querySelector("#head-clima");
+  headerClima.innerHTML = `
+  <div class="descripion">
+    <img src="${data.current.weather_icons[0]}" alt="clima">
+    <span>${data.current.weather_descriptions[0]}</span>
+  </div>
+  <div class="temperatura">
+    <span>${data.current.temperature}</span>
+  </div>
+  `;
+  const infoClima = document.querySelector("#info-clima");
+  infoClima.innerHTML = `
+  <li>humidity: ${data.current.humidity}</li>
+  <li>precip: ${data.current.precip}</li>
+  <li>pressure: ${data.current.pressure}</li>
+  <li>visibility: ${data.current.visibility}</li>
+  <li>wind_degree: ${data.current.wind_degree}</li>
+  <li>wind_dir: ${data.current.wind_dir}</li>
+  <li>wind_speed: ${data.current.wind_speed}</li>
+  `;
+  const locationClima = document.querySelector("#location-clima");
+  locationClima.innerHTML = `
+  <span>${data.location.name}, ${data.location.country}</span>
+  `;
+}
+
+function mostrarError(error) {
+  const alert = inputApi.parentElement.nextElementSibling;
+  alert.classList.remove("d-none");
+  alert.innerText = error.code > 600 ? "¡No Found!" : error.type;
+}
+
+const inputApi = document.querySelector("#input-api-clima");
+const btnApi = document.querySelector("#btn-api");
+btnApi.addEventListener("click", () => apiClima(inputApi.value));
+
+// apiClima('New%20York')
 let arrNumbers = [2, 4, 3, 68, 8, 5, 7, 13, 1, 8, 10];
 let arrStrings = ["Zas", "arte", "klgjk", "lorem"];
 
@@ -98,7 +144,7 @@ const descendantStrings = (str1, str2) => str2.localeCompare(str1);
 //   //   console.log(evento.target);
 // }
 
-const input = document.querySelector("#firstName");
+const input = document.querySelector("#email");
 
 input.addEventListener("invalid", (evento) => {
   let input = evento.target;

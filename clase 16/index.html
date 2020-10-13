@@ -388,15 +388,32 @@
               </div>
             </div>
           </div>
-          <!-- section 3 -->
+          <!-- API Clima -->
           <div id="section3" class="bg-success">
-            <h2>lorem</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-              necessitatibus. Aperiam soluta quas veniam officiis odit sequi
-              perspiciatis, culpa enim velit maxime alias quaerat placeat? Neque
-              iste voluptatem expedita minus!
-            </p>
+            <h2>Clima</h2>
+            <div class="grid-clima">
+              <div class="input">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Location"
+                    id="input-api-clima"
+                  />
+                  <div class="input-group-append">
+                    <button id="btn-api" class="btn btn-info">Search</button>
+                  </div>
+                </div>
+                <div class="alert alert-danger m-0 p-2 w-100 text-center">
+                  Error!
+                </div>
+              </div>
+              <div id="head-clima" class="clima"></div>
+              <div class="info">
+                <ul id="info-clima"></ul>
+              </div>
+              <div id="location-clima" class="location">Location</div>
+            </div>
           </div>
         </div>
       </main>
